@@ -1,0 +1,63 @@
+.header {
+  padding: 30px 18px;
+  background-color: #1a1b1f;
+
+  &-menu {
+    &__btn {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      width: 30px;
+      height: 30px;
+      background-image: url("https://img.icons8.com/ios-glyphs/30/ffffff/menu--v1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &__item {
+      display: inline;
+      margin-right: 40px;
+      text-decoration: none;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #ffffff;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &-logo {
+    margin-right: 40px;
+  }
+  &-social {
+    &__link {
+      margin-left: 16px;
+      img {
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .menudesktop {
+      display: none;
+    }
+  }
+  @media (min-width: 1024px) {
+    .menumobile {
+      display: none;
+    }
+  }
+}
