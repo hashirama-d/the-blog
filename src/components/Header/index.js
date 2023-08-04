@@ -4,6 +4,8 @@ import './style.scss';
 import HeaderBurger from "./HeaderBurger";
 import {useQuery} from "react-query";
 import HeaderMenuModal from "./HeaderMenuModal";
+import {useState} from "react";
+import FadeInOut from "../FadeInOut";
 
 const Header = () => {
     const {data: menuLinks} = useQuery("menuLinks", () =>
@@ -18,6 +20,8 @@ const Header = () => {
         fetch("http://91.107.217.207/jsonapi/block_content/social_links/da13c4ff-fea5-48e6-bedb-7ede57c8f29d?resourceVersion=id%3A2&include=field_social_links.field_icon_svg")
             .then((resp)=> resp.json()));
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <>
             <div className="container">
@@ -28,13 +32,14 @@ const Header = () => {
                         </div>
                         <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-end">
                             <HeaderSocialLinks socialLinks={socialLinks.data.field_social_links}/>
-                            <HeaderBurger/>
+                            <HeaderBurger onBurgerClick={setIsModalOpen}/>
                         </div>
-                        {/*menu button here*/}
                     </header>
                 </div>
             </div>
-            <HeaderMenuModal/>
+            <FadeInOut show={isModalOpen} duration={500}>
+                    <HeaderMenuModal onCloseModal={setIsModalOpen} menuLinks={menuLinks} socialLinks={socialLinks}/>
+            </FadeInOut>
         </>
     );
 }

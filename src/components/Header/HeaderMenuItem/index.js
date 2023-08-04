@@ -5,9 +5,13 @@ const HeaderMenuItem = ({ item }) => {
 
     }
     return (
-    <a className="header-menu__item menudesktop" href={item.link.uri === "route:<nolink>"
-        ? "#"
-        : item.link.uri.replace("internal:/", "")}>
+        <a className={
+               item.link.uri.includes("internal:/")
+                   ? "header-menu__item menudesktop active" : "header-menu__item menudesktop"
+           }
+           href={item.link.uri === "route:<nolink>"
+            ? "#"
+            : item.link.uri.replace("internal:/", "")}>
         {item.title}
     </a>
 )};

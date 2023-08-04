@@ -1,7 +1,7 @@
 
-const HeaderBurger = () => {
+const HeaderBurger = ({onBurgerClick: setIsModalOpen}) => {
     return (
-        <button className="header-menu__btn header-menu__btn-open menumobile"> </button>
+        <button className="header-menu__btn header-menu__btn-open menumobile" onClick={() => setIsModalOpen(true)}> </button>
     );
 }
 
