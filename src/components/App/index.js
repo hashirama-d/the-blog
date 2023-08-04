@@ -2,6 +2,7 @@ import Header from "../Header";
 import {QueryClient, QueryClientProvider} from "react-query";
 import {Suspense} from "react";
 import PageTitle from "../PageTitle";
+import TeasersBlock from "../TeasersBlock";
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
                 <Suspense>
                     <Header></Header>
                     <PageTitle></PageTitle>
+                    <TeasersBlock></TeasersBlock>
                 </Suspense>
             </QueryClientProvider>
         </>

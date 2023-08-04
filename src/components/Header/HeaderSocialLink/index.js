@@ -4,8 +4,8 @@ const HeaderSocialLink = ({ socialLink }) => (
         <img
             src={"http://91.107.217.207" + socialLink.field_icon_svg.uri.url}
             alt={socialLink.field_icon_svg.meta.alt}
-            width="25px"
-            height="25px"/>
+            width="22px"
+            height="22px"/>
     </a>
 );
 
