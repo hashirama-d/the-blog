@@ -1,6 +1,7 @@
 import Header from "../Header";
 import {QueryClient, QueryClientProvider} from "react-query";
 import {Suspense} from "react";
+import PageTitle from "../PageTitle";
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
             <QueryClientProvider client={client}>
                 <Suspense>
                     <Header></Header>
+                    <PageTitle></PageTitle>
                 </Suspense>
             </QueryClientProvider>
         </>

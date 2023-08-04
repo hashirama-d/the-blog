@@ -27,10 +27,10 @@ const Header = () => {
             <div className="container">
                 <div className="dark">
                     <header className="header row d-flex ">
-                        <div className="col-lg-9 col-md-6 col-6">
+                        <div className="col-lg-9 col-md-6 col-6 gx-0 gx-md-4">
                             <HeaderMenu items={menuLinks.data} logo={blogLogo.data.field_image}/>
                         </div>
-                        <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-end">
+                        <div className="col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-end gx-0 gx-md-4">
                             <HeaderSocialLinks socialLinks={socialLinks.data.field_social_links}/>
                             <HeaderBurger onBurgerClick={setIsModalOpen}/>
                         </div>
