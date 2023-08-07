@@ -1,28 +1,14 @@
 .teasers {
+  padding-bottom: 40px;
+  @media (max-width: 991px) {
+    padding-bottom: 0;
+  }
   &__important-teaser {
-    margin-bottom: 40px;
-    padding: 0 20px;
-    text-align: left;
-    @media (max-width: 767px) {
-      padding: 0;
-    }
-    &-thumbnail {
-      img {
-        width: 100%;
-      }
-    }
-    &-date {
-      font-weight: normal;
-      font-size: 11px;
-      line-height: 11px;
+    &-subtitle {
       color: #ffffff;
       opacity: 0.3;
       padding: 20px 0 10px;
-      @media (min-width: 1680px) {
-        font-size: 14px;
-        line-height: 14px;
-      }
-      @media (max-width: 990px) {
+      @media (max-width: 991px) {
         padding-top: 0;
       }
       @media (max-width: 767px) {
@@ -30,7 +16,6 @@
       }
     }
     &-title {
-      font-weight: 600;
       font-size: 28px;
       line-height: 36px;
       letter-spacing: 0;
@@ -49,12 +34,10 @@
     &-summary {
       font-size: 16px;
       line-height: 26px;
-      color: rgba(255,255,255,0.5);
-      font-weight: 200;
-      @media (min-width: 1680px) {
-        font-size: 18px;
-        line-height: 28px;
-      }
+      color: #ffffff;
+      opacity: 0.5;
+      font-weight: 300;
+      padding-top: 0;
     }
   }
   &__small-teasers {
@@ -64,28 +47,32 @@
     }
   }
   &__small-teaser {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255,255,255,0.1);
     text-align: left;
     padding-bottom: 32px;
-    margin-top: 32px;
+    padding-top: 32px;
+    margin-bottom: 0;
     &:first-child {
-      margin-top: 0;
-    }
-    &-thumbnail {
-      img {
-        width: 100%;
+      padding-top: 0;
+      border-top: 1px solid transparent;
+      @media (max-width: 991px) {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 24px;
       }
     }
-    &-date {
-      font-weight: normal;
-      font-size: 11px;
-      line-height: 11px;
+    @media (max-width: 991px) {
+      padding: 24px 0;
+    }
+    &-subtitle {
       color: #ffffff;
       opacity: 0.3;
       letter-spacing: 0.5px;
       padding: 4px 0 10px;
-      @media only screen and (max-width: 767px) {
+      @media (max-width: 767px) {
         padding: 0 0 10px;
+      }
+      @media (max-width: 575px) {
+        padding-top: 20px;
       }
     }
     &-title {
@@ -95,6 +82,10 @@
       letter-spacing: 0;
       color: #ffffff;
       opacity: 0.8;
+      @media (max-width: 767px) {
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
   }
 }
