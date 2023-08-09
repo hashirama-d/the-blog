@@ -3,28 +3,29 @@ import './style.scss'
 const Teaser = ({ node, additionalClass, thumbnailLayoutClass, textLayoutClass }) => {
     return (
         <div className={`${additionalClass} teaser`}>
-            <a className={`${additionalClass}-link teaser__link`} href={node.view_node}>
-                <div className="row">
-                    <div className={`${thumbnailLayoutClass}`}>
-                        <div className={`${additionalClass}-thumbnail teaser__thumbnail`}>
-                            <img src={"http://91.107.217.207" + node.field_image_1} alt=""/>
-                        </div>
+            <div className="row">
+                <div className={`${thumbnailLayoutClass}`}>
+                    <div className={`${additionalClass}-thumbnail teaser__thumbnail`}>
+                        <img src={"http://91.107.217.207" + node.field_image_1} alt=""/>
                     </div>
-                    <div className={`${textLayoutClass}`}>
-                        <div className={`${additionalClass}-subtitle teaser__subtitle`}>
-                            {node.field_date}
-                        </div>
+                </div>
+                <div className={`${textLayoutClass}`}>
+                    <div className={`${additionalClass}-subtitle teaser__subtitle`}>
+                        {node.field_date}
+                    </div>
+                    <a className={`${additionalClass}-link teaser__link`} href={node.view_node}>
                         <div className={`${additionalClass}-title teaser__title`}>
                             {node.title.replace(/<\/?[^>]+(>|$)/g, "")}
                         </div>
                         {node.body &&
                             <div className={`${additionalClass}-summary teaser__summary`}>
                                 {node.body.replace(/<\/?[^>]+(>|$)/g, "")}
+                                {/*забрати чистку від тегів так як по ідеї в джейсоні можуть прилетіти параграфи і
+                                 переноси рядків і воно має спрацьовувати */}
                             </div>}
-
-                    </div>
+                    </a>
                 </div>
-            </a>
+            </div>
         </div>
     )
 }

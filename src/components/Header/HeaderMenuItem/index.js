@@ -7,7 +7,7 @@ const HeaderMenuItem = ({ item }) => {
     return (
         <a className={
                item.link.uri.includes("internal:/")
-                   ? "header-menu__item menudesktop active" : "header-menu__item menudesktop"
+                   ? "header__menu-item menudesktop active" : "header__menu-item menudesktop"
            }
            href={item.link.uri === "route:<nolink>"
             ? "#"

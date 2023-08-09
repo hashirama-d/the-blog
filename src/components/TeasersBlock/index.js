@@ -14,31 +14,34 @@ const TeasersBlock = () => {
 
 
     return (
-        <div className="container">
-            <div className="dark">
-                <div className="teasers d-flex flex-wrap">
-                    <div className="col-lg-6 col-md-12">
-                        <Teaser
-                            node={importantTeaser[0]}
-                            additionalClass={"teasers__important-teaser"}
-                            thumbnailLayoutClass="col-lg-12 col-md-6"
-                            textLayoutClass="col-lg-12 col-md-6"/>
-                    </div>
-                    <div className="col-lg-6 col-md-12">
-                        <div className="teasers__small-teasers">
-                            {smallTeasers.map((node, index) =>
-                                <Teaser
-                                    node={node}
-                                    key={`small-teaser${index}`}
-                                    additionalClass={"teasers__small-teaser"}
-                                    thumbnailLayoutClass="col-lg-5 col-md-3 col-sm-5 col-12"
-                                    textLayoutClass="col-lg-7 col-md-9 col-sm-7 col-12"/>
-                            )}
+        <section className="teasers">
+            <div className="container">
+                <div className="dark">
+                    <div className="teasers__inner d-flex flex-wrap">
+                        <div className="col-lg-6 col-md-12">
+                            <Teaser
+                                node={importantTeaser[0]}
+                                additionalClass={"teasers__important-teaser"}
+                                thumbnailLayoutClass="col-lg-12 col-md-6"
+                                textLayoutClass="col-lg-12 col-md-6"/>
+                        </div>
+                        <div className="col-lg-6 col-md-12">
+                            <div className="teasers__small-teasers">
+                                {smallTeasers.map((node, index) =>
+                                    <Teaser
+                                        node={node}
+                                        key={`small-teaser${index}`}
+                                        additionalClass={"teasers__small-teaser"}
+                                        thumbnailLayoutClass="col-lg-5 col-md-3 col-sm-5 col-12"
+                                        textLayoutClass="col-lg-7 col-md-9 col-sm-7 col-12"/>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
     )
 }
 

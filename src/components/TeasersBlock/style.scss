@@ -1,7 +1,9 @@
 .teasers {
-  padding-bottom: 40px;
-  @media (max-width: 991px) {
-    padding-bottom: 0;
+  &__inner {
+    padding-bottom: 40px;
+    @media (max-width: 991px) {
+      padding-bottom: 0;
+    }
   }
   &__important-teaser {
     &-subtitle {

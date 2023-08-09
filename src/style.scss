@@ -10,6 +10,7 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #ececec;
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -17,4 +18,23 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.dark {
+  padding: 0 40px;
+  background-color: #121212;
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
+}
+
+.white {
+  padding: 0 40px;
+  background-color: #ffffff;
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
 }
