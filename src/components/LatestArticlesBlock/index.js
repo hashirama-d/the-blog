@@ -16,18 +16,16 @@ const LatestArticlesBlock = () => {
                             Latest Articles
                         </h3>
                         <div className="latest__articles row">
-                            {latestArticlesItems.map((item, index) => {
-                                return (
-                                    <div className="col-md-6 col-lg-4 col-sm-6">
+                            {latestArticlesItems.map((item, index) => (
+                                    <div className="col-md-6 col-lg-4 col-sm-6" key={`latest-article-${index}`}>
                                         <Teaser
-                                        key={`latest-article${index}`}
                                         node={item}
                                         additionalClass="latest__article"
                                         thumbnailLayoutClass="col-12"
                                         textLayoutClass="col-12"/>
                                     </div>
-                                );
-                            })}
+                                )
+                            )}
                         </div>
                     </div>
                 </div>

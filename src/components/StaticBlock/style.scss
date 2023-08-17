@@ -20,6 +20,10 @@
       font-size: 40px;
       line-height: 50px;
     }
+    @media (max-width: 575px) {
+      font-size: 32px;
+      line-height: 44px;
+    }
   }
   &__summary {
     font-size: 20px;
@@ -30,6 +34,10 @@
     @media (max-width: 991px) {
       font-size: 16px;
       line-height: 30px;
+    }
+    @media (max-width: 575px) {
+      font-size: 14px;
+      line-height: 26px;
     }
   }
   &__link {

@@ -11,6 +11,10 @@ import FadeInOut from "../FadeInOut";
 import HeaderMenuModal from "../Header/HeaderMenuModal";
 import LatestArticlesBlock from "../LatestArticlesBlock";
 import IndustryDesignBlock from "../IndustryDesignBlock";
+import ScrollToTop from "../ScrollToTop";
+import OtherArticles from "../OtherArticles";
+import ArchiveBlock from "../ArchiveBlock";
+import SideBanner from "../SideBanner";
 
 const App = () => {
 
@@ -21,11 +25,12 @@ const App = () => {
         }});
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isScrolledDown, setIsScrolledDown] = useState(true);
+
 
     return (
         <>
             <QueryClientProvider client={client}>
-                {/*<Suspense>*/}
                     <FadeInOut show={!isModalOpen} duration={500}>
                         <Suspense>
                             <Header isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}></Header>
@@ -37,6 +42,24 @@ const App = () => {
                             <FigmaDesignBlock></FigmaDesignBlock>
                             <LatestArticlesBlock></LatestArticlesBlock>
                             <IndustryDesignBlock></IndustryDesignBlock>
+                            {/* подумай над тим, чи варто винести це в окремий компонент. */}
+                            <section className="other-content">
+                                <div className="container">
+                                    <div className="white">
+                                        <div className="other-content__inner row">
+                                            <div className="col-lg-8">
+                                                <OtherArticles></OtherArticles>
+                                            </div>
+                                            <div className="col-lg-4">
+                                                <ArchiveBlock></ArchiveBlock>
+                                                <SideBanner></SideBanner>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            {/*<p>{String(isScrolledDown)} {String(isModalOpen)}</p>*/}
                         </Suspense>
 
                     </FadeInOut>
@@ -45,7 +68,11 @@ const App = () => {
                             <HeaderMenuModal onCloseModal={setIsModalOpen}/>
                         </Suspense>
                     </FadeInOut>
-                {/*</Suspense>*/}
+                    <FadeInOut show={isScrolledDown && !isModalOpen} duration={500}>
+                        <Suspense>
+                            <ScrollToTop setIsScrolledDown={setIsScrolledDown}></ScrollToTop>
+                        </Suspense>
+                    </FadeInOut>
             </QueryClientProvider>
         </>
     );

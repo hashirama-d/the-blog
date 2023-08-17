@@ -2,7 +2,7 @@ import "./style.scss";
 import {useQuery} from "react-query";
 import Teaser from "../Teaser";
 
-const LatestArticlesBlock = () => {
+const IndustryDesignBlock = () => {
     const {data: industryDesignItems} = useQuery("industryDesignItems", () =>
         fetch("http://91.107.217.207/latest-articles?_format=json")
             .then((resp) => resp.json()));
@@ -18,9 +18,8 @@ const LatestArticlesBlock = () => {
                         <div className="industry__articles row">
                             {industryDesignItems.map((item, index) => {
                                 return (
-                                    <div className="col-lg-3 col-md-6 col-12">
+                                    <div className="col-lg-3 col-md-6 col-6" key={`industry-article${index}`}>
                                         <Teaser
-                                            key={`industry-article${index}`}
                                             node={item}
                                             additionalClass="industry__article"
                                             thumbnailLayoutClass="col-12"
@@ -36,4 +35,4 @@ const LatestArticlesBlock = () => {
     );
 }
 
-export default LatestArticlesBlock;
+export default IndustryDesignBlock;

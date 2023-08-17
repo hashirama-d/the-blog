@@ -13,9 +13,8 @@ const Teaser = ({ node, additionalClass, thumbnailLayoutClass, textLayoutClass }
                     <div className={`${additionalClass}-subtitle teaser__subtitle`}>
                         {node.field_date}
                     </div>
-                    <a className={`${additionalClass}-link teaser__link`} href={node.view_node}>
-                        <div className={`${additionalClass}-title teaser__title`}>
-                            {node.title.replace(/<\/?[^>]+(>|$)/g, "")}
+                        <div className={`${additionalClass}-title teaser__title`} dangerouslySetInnerHTML={{__html: node.title}}>
+
                         </div>
                         {node.body &&
                             <div className={`${additionalClass}-summary teaser__summary`}>
@@ -23,7 +22,6 @@ const Teaser = ({ node, additionalClass, thumbnailLayoutClass, textLayoutClass }
                                 {/*забрати чистку від тегів так як по ідеї в джейсоні можуть прилетіти параграфи і
                                  переноси рядків і воно має спрацьовувати */}
                             </div>}
-                    </a>
                 </div>
             </div>
         </div>
