@@ -27,11 +27,9 @@ const TeaserSlider = ({sliderItems, className}) => {
         ]
     }
     return (
-        <>
-            <Slider {...settings}>
-                {sliderItems}
-            </Slider>
-        </>
+        <Slider {...settings}>
+            {sliderItems}
+        </Slider>
     );
 }
 

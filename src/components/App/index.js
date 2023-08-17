@@ -8,7 +8,7 @@ import EditorChoiceBlock from "../EditorChoiceBlock";
 import WebsiteDesignBlock from "../WebsiteDesignBlock";
 import FigmaDesignBlock from "../FigmaDesignBlock";
 import FadeInOut from "../FadeInOut";
-import HeaderMenuModal from "../Header/HeaderMenuModal";
+import MenuModal from "../MenuModal";
 import LatestArticlesBlock from "../LatestArticlesBlock";
 import IndustryDesignBlock from "../IndustryDesignBlock";
 import ScrollToTop from "../ScrollToTop";
@@ -68,7 +68,7 @@ const App = () => {
                     </FadeInOut>
                     <FadeInOut show={isModalOpen} duration={500}>
                         <Suspense>
-                            <HeaderMenuModal onCloseModal={setIsModalOpen}/>
+                            <MenuModal onCloseModal={setIsModalOpen}/>
                         </Suspense>
                     </FadeInOut>
                     <FadeInOut show={isScrolledDown && !isModalOpen} duration={500}>

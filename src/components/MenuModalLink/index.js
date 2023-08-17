@@ -1,4 +1,4 @@
-const HeaderMenuModalLink = ({link, title, description}) => {
+const MenuModalLink = ({link, title, description}) => {
     return (
         <a className={
             link.uri.includes("internal:/")
@@ -13,4 +13,4 @@ const HeaderMenuModalLink = ({link, title, description}) => {
         </a>
     )
 }
-export default HeaderMenuModalLink;
+export default MenuModalLink;

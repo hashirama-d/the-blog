@@ -23,7 +23,7 @@ const Header = ({isModalOpen, setIsModalOpen}) => {
             <div className="container">
                     <div className="dark">
                         <header className="header__inner row d-flex ">
-                            <div className="header__left col-lg-9 col-md-6 col-6 gx-0 gx-md-4">
+                            <div className="header__left col-lg-9 col-md-6 col-6 gx-0 gx-md-4 d-flex align-items-center">
                                 <HeaderMenu items={menuLinks.data} logo={blogLogo.data.field_image}/>
                             </div>
                             <div className="header__right col-lg-3 col-md-6 col-6 d-flex align-items-center justify-content-end gx-0 gx-md-4">
