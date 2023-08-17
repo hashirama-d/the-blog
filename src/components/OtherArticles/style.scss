@@ -20,8 +20,14 @@
       margin-top: 20px;
     }
     &-summary {
-      @media (max-width: 767px) {
+      @media (max-width: 568px) {
         display: none;
+      }
+    }
+    &-title {
+      @media (max-width: 767px) {
+        font-size: 18px;
+        line-height: 26px;
       }
     }
   }

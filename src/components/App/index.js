@@ -15,6 +15,8 @@ import ScrollToTop from "../ScrollToTop";
 import OtherArticles from "../OtherArticles";
 import ArchiveBlock from "../ArchiveBlock";
 import SideBanner from "../SideBanner";
+import TestimonialsBlock from "../TestimonialsBlock";
+import './style.scss';
 
 const App = () => {
 
@@ -47,12 +49,13 @@ const App = () => {
                                 <div className="container">
                                     <div className="white">
                                         <div className="other-content__inner row">
-                                            <div className="col-lg-8">
+                                            <div className="col-lg-8 other-content__main">
                                                 <OtherArticles></OtherArticles>
                                             </div>
-                                            <div className="col-lg-4">
+                                            <div className="col-lg-4 other-content__sidebar">
                                                 <ArchiveBlock></ArchiveBlock>
                                                 <SideBanner></SideBanner>
+                                                <TestimonialsBlock></TestimonialsBlock>
                                             </div>
                                         </div>
                                     </div>

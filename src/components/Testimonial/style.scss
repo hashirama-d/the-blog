@@ -1,0 +1,46 @@
+.testimonials__item {
+  display: flex;
+  padding: 24px 0 24px 20px;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  @media (max-width: 767px) {
+    padding: 24px 0;
+    border-left: 1px solid transparent;
+  }
+  &:last-child {
+    border-bottom: 1px solid transparent;
+  }
+  &:first-child {
+    padding-top: 10px;
+  }
+  &-logo {
+    &-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+  }
+  &-body {
+    margin-left: 14px;
+  }
+  &-text {
+    font-size: 13px;
+    line-height: 21px;
+    color: #404852;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+  &-user {
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #121212;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 500;
+    }
+  }
+}

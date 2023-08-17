@@ -1,4 +1,4 @@
-@import '../node_modules/bootstrap/scss/bootstrap';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
 .container {
   max-width: 1280px;
   width: 100%;
@@ -19,7 +19,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -39,6 +39,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.other-content__inner {
-  padding: 60px 0 40px;
+.other-content {
+  &__inner {
+    padding: 60px 0 80px;
+  }
 }
