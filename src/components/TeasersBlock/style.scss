@@ -1,19 +1,21 @@
+@import '../../utility/variables';
+
 .teasers {
   &__inner {
     padding-bottom: 40px;
-    @media (max-width: 991px) {
+    @media (max-width: $desktopS) {
       padding-bottom: 0;
     }
   }
   &__important-teaser {
     &-subtitle {
-      color: #ffffff;
+      color: $white;
       opacity: 0.3;
       padding: 20px 0 10px;
-      @media (max-width: 991px) {
+      @media (max-width: $desktopS) {
         padding-top: 0;
       }
-      @media (max-width: 767px) {
+      @media (max-width: $tablet) {
         padding-top: 20px;
       }
     }
@@ -21,14 +23,14 @@
       font-size: 28px;
       line-height: 36px;
       letter-spacing: 0;
-      color: #ffffff;
+      color: $white;
       opacity: 0.8;
       margin-bottom: 16px;
-      @media (min-width: 1680px) {
+      @media (min-width: $desktopL) {
         font-size: 32px;
         line-height: 42px;
       }
-      @media (max-width: 767px) {
+      @media (max-width: $tablet) {
         font-size: 24px;
         line-height: 32px;
       }
@@ -36,7 +38,7 @@
     &-summary {
       font-size: 16px;
       line-height: 26px;
-      color: #ffffff;
+      color: $white;
       opacity: 0.5;
       font-weight: 300;
       padding-top: 0;
@@ -44,7 +46,7 @@
   }
   &__small-teasers {
     padding: 0 20px;
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
       padding: 0;
     }
   }
@@ -57,23 +59,23 @@
     &:first-child {
       padding-top: 0;
       border-top: 1px solid transparent;
-      @media (max-width: 991px) {
+      @media (max-width: $desktopS) {
         border-top: 1px solid rgba(255,255,255,0.1);
         padding-top: 24px;
       }
     }
-    @media (max-width: 991px) {
+    @media (max-width: $desktopS) {
       padding: 24px 0;
     }
     &-subtitle {
-      color: #ffffff;
+      color: $white;
       opacity: 0.3;
       letter-spacing: 0.5px;
       padding: 4px 0 10px;
-      @media (max-width: 767px) {
+      @media (max-width: $tablet) {
         padding: 0 0 10px;
       }
-      @media (max-width: 575px) {
+      @media (max-width: $phone) {
         padding-top: 20px;
       }
     }
@@ -82,9 +84,9 @@
       font-size: 20px;
       line-height: 28px;
       letter-spacing: 0;
-      color: #ffffff;
+      color: $white;
       opacity: 0.8;
-      @media (max-width: 767px) {
+      @media (max-width: $tablet) {
         font-size: 18px;
         line-height: 24px;
       }

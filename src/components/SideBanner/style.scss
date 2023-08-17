@@ -1,10 +1,11 @@
+@import '../../utility/variables';
+
 .side-banner {
   padding: 0 20px;
   margin: 60px 0;
-  @media (max-width: 767px) {
+  @media (max-width: $tablet) {
     padding: 0;
     margin: 30px 0;
-
   }
   &__image {
     width: 100%;

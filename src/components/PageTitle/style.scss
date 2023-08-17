@@ -1,18 +1,20 @@
+@import '../../utility/variables';
+
 .blog-logo {
   &__title-img {
     width: 100%;
     margin: 20px 0 60px;
     padding: 40px 0;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    @media (max-width: 767px) {
+    border-top: 1px solid rgba($white, 0.1);
+    border-bottom: 1px solid rgba($white, 0.1);
+    @media (max-width: $tablet) {
       margin: 0 0 28px;
       padding: 20px 0;
     }
   }
   &__inner {
     padding: 0 20px;
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
       padding: 0;
     }
   }

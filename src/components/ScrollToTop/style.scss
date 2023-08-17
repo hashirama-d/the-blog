@@ -1,3 +1,5 @@
+@import '../../utility/variables';
+
 .scroll-to-top-btn {
   position: fixed;
   bottom: 20px;
@@ -5,8 +7,8 @@
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   cursor: pointer;
-  background-color: #fff;
-  color: #121212;
+  background-color: $white;
+  color: $bg-dark;
   border: none;
   outline: none;
   padding: 10px 20px;

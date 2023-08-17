@@ -1,8 +1,10 @@
+@import '../../utility/variables';
+
 .teaser {
   margin-bottom: 40px;
   padding: 0 20px;
   text-align: left;
-  @media (max-width: 767px) {
+  @media (max-width: $tablet) {
     padding: 0;
   }
   &__thumbnail {
@@ -17,7 +19,7 @@
     color: #000000;
     opacity: 0.5;
     padding: 16px 0 10px;
-    @media (min-width: 1680px) {
+    @media (min-width: $desktopL) {
       font-size: 14px;
       line-height: 14px;
     }
@@ -27,11 +29,11 @@
     line-height: 30px;
     letter-spacing: 0.3px;
     font-weight: 600;
-    @media (min-width: 1680px) {
+    @media (min-width: $desktopL) {
       font-size: 25px;
       line-height: 35px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
       font-size: 18px;
       line-height: 24px;
     }
@@ -42,7 +44,7 @@
     letter-spacing: 0.3px;
     opacity: 0.7;
     padding-top: 20px;
-    @media (min-width: 1680px) {
+    @media (min-width: $desktopL) {
       font-size: 18px;
       line-height: 28px;
       font-weight: 300;

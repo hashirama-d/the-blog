@@ -1,18 +1,13 @@
+@import '../../utility/mixins';
+
+
 .other-articles {
   &__heading {
-    color: #121212;
-    font-size: 16px;
-    line-height: 26px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 40px;
-    opacity: 0.3;
-    padding-left: 20px;
+    @include section_heading();
   }
   &__item {
     &-subtitle {
-      @media (min-width: 568px) {
+      @media (min-width: $phone) {
         padding-top: 0;
       }
     }
@@ -20,16 +15,15 @@
       margin-top: 20px;
     }
     &-summary {
-      @media (max-width: 568px) {
+      @media (max-width: $phone) {
         display: none;
       }
     }
     &-title {
-      @media (max-width: 767px) {
+      @media (max-width: $tablet) {
         font-size: 18px;
         line-height: 26px;
       }
     }
   }
-
 }

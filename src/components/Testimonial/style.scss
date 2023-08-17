@@ -1,9 +1,11 @@
+@import '../../utility/variables';
+
 .testimonials__item {
   display: flex;
   padding: 24px 0 24px 20px;
-  border-left: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-  @media (max-width: 767px) {
+  border-left: 1px solid $border-gray;
+  border-bottom: 1px solid $border-gray;
+  @media (max-width: $tablet) {
     padding: 24px 0;
     border-left: 1px solid transparent;
   }
@@ -34,10 +36,10 @@
     font-size: 13px;
     line-height: 22px;
     font-weight: 400;
-    color: #121212;
+    color: $bg-dark;
     margin-top: 6px;
     letter-spacing: 0.5px;
-    @media only screen and (max-width: 767px) {
+    @media (max-width: $tablet) {
       font-size: 14px;
       line-height: 22px;
       font-weight: 500;
