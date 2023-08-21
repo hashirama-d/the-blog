@@ -1,6 +1,6 @@
 
 const HeaderSocialLink = ({ socialLink }) => (
-    <a className="header__social-link" href={socialLink.field_link.uri}>
+    <a className="header__social-link" href={socialLink.field_link.uri} target="_blank" rel="noreferrer">
         <img
             src={"http://91.107.217.207" + socialLink.field_icon_svg.uri.url}
             alt={socialLink.field_icon_svg.meta.alt}

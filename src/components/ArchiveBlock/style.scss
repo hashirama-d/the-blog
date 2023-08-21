@@ -1,6 +1,13 @@
 @import '../../utility/mixins';
 
 .archive {
+  @media (max-width: $tablet) {
+    background: #f5f6f8;
+    padding: 20px;
+    margin-left: -20px;
+    margin-top: 20px;
+    width: calc(100% + 40px);
+  }
   &__heading {
     @include section_heading();
     @media (max-width: $tablet) {

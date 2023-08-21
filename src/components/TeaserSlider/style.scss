@@ -1,4 +1,9 @@
+@import "../../utility/variables";
+
 .slick {
+  &-slide {
+    margin-bottom: 30px;
+  }
   &-slider {
     position: relative;
   }
@@ -6,33 +11,32 @@
     display: flex;
     padding: 0;
   }
-
   &-list {
     overflow: hidden;
     min-width: 100%;
     padding: 0;
   }
-  &-arrow {
-    display: block;
-    position: absolute;
-    top: 47%;
-    z-index: 1000;
-    width: 50px;
-    height: 50px;
-    font-size: 0;
-    background-color: transparent;
-    //opacity: 0.5;
-    //border-radius: 50%;
-    border: none;
-    outline: none;
-
-  }
-  &-prev {
-    left: -10px;
-    background-image: url("https://img.icons8.com/ios-filled/50/chevron-left.png");
-  }
-  &-next {
-    right: -10px;
-    background-image: url("https://img.icons8.com/ios-filled/50/chevron-right.png");
+  &-dots {
+    display: flex !important;
+    justify-content: center;
+    li {
+      margin-right: 15px;
+      opacity: 0.6;
+      button {
+        font-size: 0;
+        background-color: $bg-dark;
+        outline: none;
+        border: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+      &.slick-active, &:hover {
+        opacity: 1;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }

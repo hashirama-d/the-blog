@@ -25,7 +25,9 @@ ul, li, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
-
+li {
+  list-style: none;
+}
 .dark {
   padding: 0 40px;
   background-color: $bg-dark;
@@ -47,3 +49,4 @@ ul, li, p, h1, h2, h3, h4, h5, h6 {
     padding: 60px 0 80px;
   }
 }
+

@@ -85,7 +85,7 @@ class FadeInOut extends Component {
                 className={className}
                 style={{
                     ...style,
-                    transition: `opacity ${duration}ms ease-in-out`,
+                    transition: `opacity ${duration}ms linear`,
                     opacity: 0.1,
                     ...transitionStyles[status]
                 }}

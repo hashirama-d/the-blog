@@ -9,14 +9,17 @@
   }
 
   &__slider {
-    .slick-current .editor-choice__slider-item {
+    .slick-slide.slick-active.slick-current {
       border-left: 1px solid transparent;
     }
-    &-item {
+    .slick-slide.slick-active {
       border-left: 1px solid $border-gray;
       @media (max-width: $desktopS) {
         border-left: 1px solid transparent;
       }
+    }
+
+    &-item {
       @media (max-width: $tablet) {
         padding: 0 20px;
       }

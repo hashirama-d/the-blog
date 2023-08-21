@@ -18,10 +18,9 @@ const Teaser = ({ node, additionalClass, thumbnailLayoutClass, textLayoutClass }
 
                         </div>
                         {node.body &&
-                            <div className={`${additionalClass}-summary teaser__summary`}>
-                                {node.body.replace(/<\/?[^>]+(>|$)/g, "")}
-                                {/*забрати чистку від тегів так як по ідеї в джейсоні можуть прилетіти параграфи і
-                                 переноси рядків і воно має спрацьовувати */}
+                            <div className={`${additionalClass}-summary teaser__summary`}
+                                 dangerouslySetInnerHTML={{__html: node.body}}>
+                                {/*{node.body.replace(/<\/?[^>]+(>|$)/g, "")}*/}
                             </div>}
                 </div>
             </div>

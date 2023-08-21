@@ -1,6 +1,6 @@
 import Header from "../Header";
 import {QueryClient, QueryClientProvider} from "react-query";
-import {Suspense, useState} from "react";
+import {Suspense, useEffect, useState} from "react";
 import PageTitle from "../PageTitle";
 import TeasersBlock from "../TeasersBlock";
 import Tutorials from "../Tutorials";
@@ -27,13 +27,31 @@ const App = () => {
         }});
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isScrolledDown, setIsScrolledDown] = useState(true);
+    const [isScrolledDown, setIsScrolledDown] = useState(false);
 
+    const goToTop = () => window.scrollTo({top: 0, behavior: 'smooth'});
+
+
+    useEffect(() => {
+        const handleScroll = event => {
+            const scrolled = window.scrollY;
+            if (scrolled > 100){
+                setIsScrolledDown(true)
+            }
+            else if (scrolled <= 100){
+                setIsScrolledDown(false)
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+
+    });
 
     return (
         <>
             <QueryClientProvider client={client}>
-                    <FadeInOut show={!isModalOpen} duration={500}>
+                    <FadeInOut show={!isModalOpen} duration={150}>
                         <Suspense>
                             <Header isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}></Header>
                             <PageTitle></PageTitle>
@@ -44,7 +62,6 @@ const App = () => {
                             <FigmaDesignBlock></FigmaDesignBlock>
                             <LatestArticlesBlock></LatestArticlesBlock>
                             <IndustryDesignBlock></IndustryDesignBlock>
-                            {/* подумай над тим, чи варто винести це в окремий компонент. */}
                             <section className="other-content">
                                 <div className="container">
                                     <div className="white">
@@ -62,18 +79,17 @@ const App = () => {
                                 </div>
                             </section>
 
-                            {/*<p>{String(isScrolledDown)} {String(isModalOpen)}</p>*/}
                         </Suspense>
 
                     </FadeInOut>
                     <FadeInOut show={isModalOpen} duration={500}>
                         <Suspense>
-                            <MenuModal onCloseModal={setIsModalOpen}/>
+                            <MenuModal onCloseModal={setIsModalOpen} isModalOpen={isModalOpen}/>
                         </Suspense>
                     </FadeInOut>
                     <FadeInOut show={isScrolledDown && !isModalOpen} duration={500}>
                         <Suspense>
-                            <ScrollToTop setIsScrolledDown={setIsScrolledDown}></ScrollToTop>
+                            <ScrollToTop setIsScrolledDown={setIsScrolledDown} onClick={goToTop}></ScrollToTop>
                         </Suspense>
                     </FadeInOut>
             </QueryClientProvider>

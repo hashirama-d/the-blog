@@ -34,14 +34,17 @@
       text-decoration: none;
       padding-top: 9px;
       padding-bottom: 9px;
-      font-size: 12px;
       line-height: 20px;
       font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: $white;
-      opacity: 0.5;
-      &:hover, &.active {
+
+      &-link {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: $white;
+        opacity: 0.5;
+      }
+      &-link:hover, &-link.active {
         opacity: 1;
       }
     }

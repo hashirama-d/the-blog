@@ -8,7 +8,6 @@
   min-height: 100%;
   background-color: $white;
   transition: opacity 0.5s ease-in-out;
-  z-index: 20;
   &__btn-close {
     text-align: right;
     padding: 20px;
@@ -35,6 +34,10 @@
     border-left: 4px solid $white;
     &-title {
       padding-left: 50px;
+      @media (max-width: $phone) {
+        font-size: 26px;
+        line-height: 38px;
+      }
     }
     &-arrow {
       position: absolute;
@@ -44,6 +47,10 @@
       line-height: 26px;
       padding-left: 50px;
       padding-top: 4px;
+      @media (max-width: $phone) {
+        font-size: 13px;
+        line-height: 23px;
+      }
     }
     &:hover, &.active {
       color: rgba(0, 0, 0, 1);
@@ -53,13 +60,4 @@
       color: rgba(0, 0, 0, 1);
     }
   }
-}
-
-.fade-in {
-  opacity: 1;
-}
-
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }

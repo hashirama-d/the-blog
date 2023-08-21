@@ -3,8 +3,8 @@ import "./style.scss"
 const TeaserSlider = ({sliderItems, className}) => {
 
     const settings = {
-        arrows: true,
-        dots: false,
+        arrows: false,
+        dots: true,
         infinite: true,
         autoplay: true,
         speed: 2000,

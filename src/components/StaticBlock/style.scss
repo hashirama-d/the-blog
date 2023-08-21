@@ -50,8 +50,11 @@
     width: 75%;
     text-align: center;
     opacity: 0.8;
+    transition: .3s all ease-in-out;
     &:hover {
       opacity: 1;
+      background-color: $white;
+      color: $bg-dark;
     }
     @media (max-width: $desktopS) {
       font-size: 20px;
