@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 const HeaderMenuItem = ({ item }) => {
     return (
         <li className="header__menu-item">
@@ -14,15 +12,5 @@ const HeaderMenuItem = ({ item }) => {
             </a>
         </li>
 )};
-
-HeaderMenuItem.propTypes = {
-    item: PropTypes.shape({
-        link: PropTypes.shape({
-            uri: PropTypes.string,
-        }),
-        title: PropTypes.string,
-        id: PropTypes.string
-    })
-}
 
 export default HeaderMenuItem;

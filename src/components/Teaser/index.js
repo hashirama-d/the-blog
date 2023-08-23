@@ -20,7 +20,6 @@ const Teaser = ({ node, additionalClass, thumbnailLayoutClass, textLayoutClass }
                         {node.body &&
                             <div className={`${additionalClass}-summary teaser__summary`}
                                  dangerouslySetInnerHTML={{__html: node.body}}>
-                                {/*{node.body.replace(/<\/?[^>]+(>|$)/g, "")}*/}
                             </div>}
                 </div>
             </div>

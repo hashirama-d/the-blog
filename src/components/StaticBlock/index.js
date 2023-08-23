@@ -7,8 +7,8 @@ const StaticBlock = ( {block, additionalClass} ) => {
                 <div className={`${additionalClass}__title block__title`}>
                     {block.data.field_title.replace(/<\/?[^>]+(>|$)/g, "")}
                 </div>
-                <div className={`${additionalClass}__summary block__summary`}>
-                    {block.data.body.value.replace(/<\/?[^>]+(>|$)/g, "")}
+                <div className={`${additionalClass}__summary block__summary`}
+                     dangerouslySetInnerHTML={{__html: block.data.body.value}}>
                 </div>
                 <a className={`${additionalClass}__link block__link`} href={block.data.field_link.uri}>
                     {block.data.field_link.title}

@@ -1,7 +1,5 @@
 import HeaderMenuItem from "../HeaderMenuItem";
-import PropTypes from "prop-types";
 import HeaderLogo from "../HeaderLogo";
-
 
 const HeaderMenu = ({ items = [], logo}) => {
     return (
@@ -17,11 +15,5 @@ const HeaderMenu = ({ items = [], logo}) => {
         </>
     )
 };
-
-
-
-HeaderMenu.propTypes = {
-    items: PropTypes.array,
-}
 
 export default HeaderMenu;

@@ -1,4 +1,3 @@
-
 const HeaderSocialLink = ({ socialLink }) => (
     <a className="header__social-link" href={socialLink.field_link.uri} target="_blank" rel="noreferrer">
         <img

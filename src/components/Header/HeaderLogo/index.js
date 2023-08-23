@@ -1,4 +1,3 @@
-
 const HeaderLogo = ({logo}) => (
     <a href="/" className="header__logo">
         <img

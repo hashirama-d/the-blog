@@ -17,9 +17,6 @@ const EditorChoiceBlock = () => {
         />
     ))
 
-
-    // console.log(editorChoiceItems)
-
     return (
         <section className="editor-choice">
             <div className="container">
