@@ -5,7 +5,7 @@ import useFetch from "../../hooks/useFetch";
 const OtherArticles = () => {
 
     // Data fetching
-    const {data: otherArticlesData} = useFetch("http://91.107.217.207/latest-articles?_format=json", "otherArticlesData")
+    const {data: otherArticlesData} = useFetch(process.env.REACT_APP_ROOT_ADDRESS + "/latest-articles?_format=json", "otherArticlesData")
 
     return (
         <section className="other-articles">

@@ -5,7 +5,7 @@ import useFetch from "../../hooks/useFetch";
 const IndustryDesignBlock = () => {
 
     // Data fetching
-    const {data: industryDesignItems} = useFetch("http://91.107.217.207/latest-articles?_format=json",
+    const {data: industryDesignItems} = useFetch(process.env.REACT_APP_ROOT_ADDRESS + "/latest-articles?_format=json",
         "industryDesignItems")
 
     return (

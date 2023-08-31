@@ -5,7 +5,7 @@ import useFetch from "../../hooks/useFetch";
 const EditorChoiceBlock = () => {
 
     // Data fetching
-    const {data: editorChoiceItems} = useFetch("http://91.107.217.207/editors-choice?_format=json", "editorChoiceItems")
+    const {data: editorChoiceItems} = useFetch(process.env.REACT_APP_ROOT_ADDRESS + "/editors-choice?_format=json", "editorChoiceItems")
 
     // Generating array with items for slider component
     const sliderItems = editorChoiceItems.map((item, i) => (

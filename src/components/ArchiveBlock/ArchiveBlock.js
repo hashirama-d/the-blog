@@ -5,7 +5,7 @@ import useFetch from "../../hooks/useFetch";
 const ArchiveBlock = () => {
 
     // Data fetching
-    const {data: archivesData} = useFetch("http://91.107.217.207/archives?_format=json", "archivesData")
+    const {data: archivesData} = useFetch(process.env.REACT_APP_ROOT_ADDRESS + "/archives?_format=json", "archivesData")
 
     return (
         <section className="archive">

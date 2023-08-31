@@ -6,7 +6,7 @@ import useFetch from "../../hooks/useFetch";
 const Tutorials = () => {
 
     // Data fetching
-    const {data: tutorialItems} = useFetch("http://91.107.217.207/design-tutorials-first?_format=json",
+    const {data: tutorialItems} = useFetch(process.env.REACT_APP_ROOT_ADDRESS + "/design-tutorials-first?_format=json",
         "tutorialItems");
 
     // Generating array of items for slider components

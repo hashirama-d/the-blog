@@ -5,8 +5,8 @@ import useFetch from "../../hooks/useFetch";
 const TeasersBlock = () => {
 
     // Data fetching
-    const {data: importantTeaser} = useFetch("http://91.107.217.207/blog-articles-first?_format=json", "importantTeaser")
-    const {data: smallTeasers} = useFetch("http://91.107.217.207/blog-articles-second?_format=json", "otherTeasers")
+    const {data: importantTeaser} = useFetch(process.env.REACT_APP_ROOT_ADDRESS + "/blog-articles-first?_format=json", "importantTeaser")
+    const {data: smallTeasers} = useFetch(process.env.REACT_APP_ROOT_ADDRESS + "/blog-articles-second?_format=json", "otherTeasers")
 
 
     return (

@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 
 const TestimonialsBlock = () => {
 
-    const {data: testimonialsData} = useFetch("http://91.107.217.207/testimonials?_format=json", "testimonialsData")
+    const {data: testimonialsData} = useFetch(process.env.REACT_APP_ROOT_ADDRESS + "/testimonials?_format=json", "testimonialsData")
 
     return (
       <div className="testimonials">
