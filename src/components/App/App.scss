@@ -1,0 +1,60 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../utility/variables';
+
+// generic styles for tags start
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $bg-gray;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul, li, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+// generic styles for tags start
+
+// styles for wrapper container start
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  @media (min-width: $desktopL) {
+    max-width: 1440px;
+  }
+}
+// styles for wrapper container end
+
+// styles for sections wrapper start
+.dark {
+  padding: 0 40px;
+  background-color: $bg-dark;
+  @media (max-width: $tablet) {
+    padding: 0 20px;
+  }
+}
+
+.white {
+  padding: 0 40px;
+  background-color: $white;
+  @media (max-width: $tablet) {
+    padding: 0 20px;
+  }
+}
+
+.other-content {
+  &__inner {
+    padding: 60px 0 80px;
+  }
+}
+// styles for sections wrapper end
+

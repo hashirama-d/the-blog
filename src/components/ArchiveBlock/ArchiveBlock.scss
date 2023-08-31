@@ -1,0 +1,48 @@
+@import '../../utility/mixins';
+
+.archive {
+  // styles for archive block start
+  @media (max-width: $tablet) {
+    background: #f5f6f8;
+    padding: 20px;
+    margin-left: -20px;
+    margin-top: 20px;
+    width: calc(100% + 40px);
+  }
+  &__heading {
+    @include section_heading();
+    @media (max-width: $tablet) {
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  &__item {
+    border-bottom: 1px solid $border-gray;
+    border-left: 1px solid $border-gray;
+    margin-bottom: 0;
+    padding: 24px;
+    @media (max-width: $tablet) {
+      padding: 24px 0;
+      border-left: 1px solid transparent;
+    }
+    &:last-child {
+      border-bottom: 1px solid transparent;
+    }
+    &:first-child {
+      padding-top: 10px;
+    }
+    &-title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.4px;
+      color: $bg-dark;
+    }
+    &-subtitle {
+      @media (max-width: $tablet) {
+        padding-top: 0;
+      }
+    }
+  }
+  // styles for archive block end
+}

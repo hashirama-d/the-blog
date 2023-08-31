@@ -1,0 +1,32 @@
+@import '../../utility/mixins';
+
+.editor-choice {
+  // styles for editor choice block start
+  &__inner {
+    padding: 60px 0 40px;
+  }
+  &__heading {
+    @include section_heading();
+  }
+  // styles for editor choice block start
+
+  // styles for slider start
+  &__slider {
+    .slick-slide.slick-active.slick-current {
+      border-left: 1px solid transparent;
+    }
+    .slick-slide.slick-active {
+      border-left: 1px solid $border-gray;
+      @media (max-width: $desktopS) {
+        border-left: 1px solid transparent;
+      }
+    }
+
+    &-item {
+      @media (max-width: $tablet) {
+        padding: 0 20px;
+      }
+    }
+  }
+  // styles for slider end
+}

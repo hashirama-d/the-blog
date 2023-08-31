@@ -1,5 +1,6 @@
 @import './variables';
 
+// mixin for section headings
 @mixin section_heading() {
   color: $bg-dark;
   font-size: 16px;
